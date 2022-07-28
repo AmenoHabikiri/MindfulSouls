@@ -1,7 +1,5 @@
 import '../auth/auth_util.dart';
 import '../backend/backend.dart';
-import '../change_password/change_password_widget.dart';
-import '../edit_profile/edit_profile_widget.dart';
 import '../firstpage/firstpage_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -53,262 +51,207 @@ class _MyProfileWidgetState extends State<MyProfileWidget> {
             : null;
         return Scaffold(
           key: scaffoldKey,
-          appBar: AppBar(
-            backgroundColor: FlutterFlowTheme.of(context).primaryColor,
-            automaticallyImplyLeading: false,
-            title: Align(
-              alignment: AlignmentDirectional(-0.05, 0),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(160),
+            child: AppBar(
+              backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
+              automaticallyImplyLeading: false,
+              flexibleSpace: Align(
+                alignment: AlignmentDirectional(0, 0),
                 child: Text(
                   'Welcome',
                   style: FlutterFlowTheme.of(context).title1.override(
                         fontFamily: 'Raleway',
-                        color: FlutterFlowTheme.of(context).secondaryColor,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        fontWeight: FontWeight.w600,
                       ),
                 ),
               ),
+              actions: [],
+              elevation: 0,
             ),
-            actions: [],
-            centerTitle: false,
-            elevation: 0,
           ),
           backgroundColor: FlutterFlowTheme.of(context).darkBG,
           body: SafeArea(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
+            child: Align(
+              alignment: AlignmentDirectional(-0.5, -0.45),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 162,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryColor,
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                      ),
+                    ),
+                    child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 40,
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        height: 60,
                         decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBlack,
+                          color: FlutterFlowTheme.of(context).primaryColor,
                           border: Border.all(
                             color: FlutterFlowTheme.of(context).primaryColor,
-                            width: 1,
                           ),
                         ),
-                        child: Align(
-                          alignment: AlignmentDirectional(-1, 0),
-                          child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
-                            child: AuthUserStreamWidget(
-                              child: Text(
-                                currentUserDisplayName,
-                                style: FlutterFlowTheme.of(context)
-                                    .subtitle1
-                                    .override(
-                                      fontFamily: 'Lexend Deca',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                        child: Container(
+                          width: 30,
+                          height: 30,
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(-1, 0.6),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 0, 0, 0),
+                                  child: AuthUserStreamWidget(
+                                    child: Text(
+                                      valueOrDefault(
+                                              currentUserDocument?.age, 0)
+                                          .toString(),
+                                      style: FlutterFlowTheme.of(context)
+                                          .subtitle1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiaryColor,
+                                            fontSize: 24,
+                                          ),
                                     ),
+                                  ),
+                                ),
                               ),
-                            ),
+                              Align(
+                                alignment: AlignmentDirectional(-1, -0.6),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 0, 0, 0),
+                                  child: AuthUserStreamWidget(
+                                    child: Text(
+                                      currentUserDisplayName,
+                                      style: FlutterFlowTheme.of(context)
+                                          .subtitle1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiaryColor,
+                                            fontSize: 24,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-0.2, 0.6),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 0, 0, 0),
+                                  child: AuthUserStreamWidget(
+                                    child: Text(
+                                      valueOrDefault(
+                                          currentUserDocument?.gender, ''),
+                                      style: FlutterFlowTheme.of(context)
+                                          .subtitle1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiaryColor,
+                                            fontSize: 24,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-1, 0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16, 0, 0, 0),
+                                  child: Text(
+                                    currentUserEmail,
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Lexend Deca',
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                          fontSize: 24,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                     ),
-                  ],
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 162,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).primaryBlack,
                   ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(16, 12, 0, 0),
-                          child: Text(
-                            'Account Information',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyText2
-                                .override(
-                                  fontFamily: 'Lexend Deca',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  fontSize: 30,
-                                ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 8),
-                          child: InkWell(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => EditProfileWidget(
-                                    displayName: myProfileUsersRecord,
-                                    email: myProfileUsersRecord,
-                                  ),
-                                ),
-                              );
-                            },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16, 18, 0, 16),
-                                    child: Text(
-                                      'Edit Profile',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Lexend Deca',
-                                            fontSize: 20,
-                                          ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 12, 8),
-                                  child: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: FlutterFlowTheme.of(context)
-                                        .tertiaryColor,
-                                    size: 24,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Divider(
-                          height: 2,
-                          thickness: 1,
-                          indent: 0,
-                          endIndent: 0,
-                          color: Color(0xFF434D5A),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 8),
-                          child: InkWell(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => ChangePasswordWidget(),
-                                ),
-                              );
-                            },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        16, 8, 0, 16),
-                                    child: Text(
-                                      'Change Password',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily: 'Lexend Deca',
-                                            fontSize: 20,
-                                          ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 12, 8),
-                                  child: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: FlutterFlowTheme.of(context)
-                                        .tertiaryColor,
-                                    size: 24,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
+                  Container(
+                    width: double.infinity,
+                    height: 400,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryColor,
                     ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                    child: Align(
+                      alignment: AlignmentDirectional(0, 0),
+                      child: Container(
+                        width: 150,
+                        height: 100,
+                        child: Stack(
                           children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
-                              child: FFButtonWidget(
-                                onPressed: () async {
-                                  await Navigator.push(
-                                    context,
-                                    PageTransition(
-                                      type: PageTransitionType.bottomToTop,
-                                      duration: Duration(milliseconds: 250),
-                                      reverseDuration:
-                                          Duration(milliseconds: 250),
-                                      child: FirstpageWidget(),
-                                    ),
-                                  );
-                                  await signOut();
-                                },
-                                text: 'Log Out',
-                                options: FFButtonOptions(
-                                  width: 130,
-                                  height: 50,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryBlack,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .subtitle2
-                                      .override(
-                                        fontFamily: 'Lexend Deca',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
+                            Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
+                                child: FFButtonWidget(
+                                  onPressed: () async {
+                                    await Navigator.push(
+                                      context,
+                                      PageTransition(
+                                        type: PageTransitionType.bottomToTop,
+                                        duration: Duration(milliseconds: 250),
+                                        reverseDuration:
+                                            Duration(milliseconds: 250),
+                                        child: FirstpageWidget(),
                                       ),
-                                  elevation: 3,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1,
+                                    );
+                                    await signOut();
+                                  },
+                                  text: 'Log Out',
+                                  options: FFButtonOptions(
+                                    width: 130,
+                                    height: 50,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBlack,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .subtitle2
+                                        .override(
+                                          fontFamily: 'Lexend Deca',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
+                                        ),
+                                    elevation: 3,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8),
                                   ),
-                                  borderRadius: BorderRadius.circular(8),
                                 ),
                               ),
                             ),
-                            Text(
-                              'App Version v0.0',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context).bodyText2,
-                            ),
                           ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );

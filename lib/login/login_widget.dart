@@ -264,65 +264,173 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 ),
                               ),
                             ),
-                            Expanded(
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 60),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 48, 0, 48),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 0, 6),
+                                    child: Text(
+                                      'Don’t have an account yet? ',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            color: FlutterFlowTheme.of(context)
+                                                .darkBG,
+                                          ),
+                                    ),
+                                  ),
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 200),
+                                          reverseDuration:
+                                              Duration(milliseconds: 200),
+                                          child: RegisterWidget(),
+                                        ),
+                                      );
+                                    },
+                                    text: 'Register',
+                                    options: FFButtonOptions(
+                                      width: 100,
+                                      height: 32,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .subtitle2
+                                          .override(
+                                            fontFamily: 'Raleway',
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiaryColor,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                      elevation: 0,
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1,
+                                      ),
+                                      borderRadius: BorderRadius.circular(0),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Container(
+                                width: 200,
+                                height: 50,
+                                child: Stack(
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 6),
-                                      child: Text(
-                                        'Don’t have an account yet? ',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .darkBG,
-                                            ),
+                                    Align(
+                                      alignment: AlignmentDirectional(0, 0),
+                                      child: FFButtonWidget(
+                                        onPressed: () {
+                                          print('Button pressed ...');
+                                        },
+                                        text: 'Sign in with Google',
+                                        icon: Icon(
+                                          Icons.add,
+                                          color: Colors.transparent,
+                                          size: 20,
+                                        ),
+                                        options: FFButtonOptions(
+                                          width: 200,
+                                          height: 40,
+                                          color: Colors.white,
+                                          textStyle: GoogleFonts.getFont(
+                                            'Roboto',
+                                            color: Color(0xFF606060),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 15,
+                                          ),
+                                          elevation: 4,
+                                          borderSide: BorderSide(
+                                            color: Colors.transparent,
+                                            width: 0,
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                    FFButtonWidget(
-                                      onPressed: () async {
-                                        await Navigator.push(
-                                          context,
-                                          PageTransition(
-                                            type: PageTransitionType.fade,
-                                            duration:
-                                                Duration(milliseconds: 200),
-                                            reverseDuration:
-                                                Duration(milliseconds: 200),
-                                            child: RegisterWidget(),
-                                          ),
-                                        );
-                                      },
-                                      text: 'Register',
-                                      options: FFButtonOptions(
-                                        width: 100,
-                                        height: 32,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Raleway',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .tertiaryColor,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                        elevation: 0,
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
+                                    Align(
+                                      alignment: AlignmentDirectional(-0.83, 0),
+                                      child: Container(
+                                        width: 22,
+                                        height: 22,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
                                         ),
-                                        borderRadius: BorderRadius.circular(0),
+                                        child: Image.network(
+                                          'https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?w=1000&ssl=1',
+                                          fit: BoxFit.contain,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Container(
+                                width: 230,
+                                height: 44,
+                                child: Stack(
+                                  children: [
+                                    Align(
+                                      alignment: AlignmentDirectional(0, 0),
+                                      child: FFButtonWidget(
+                                        onPressed: () {
+                                          print('Button pressed ...');
+                                        },
+                                        text: 'Login with Facebook',
+                                        icon: Icon(
+                                          Icons.add,
+                                          color: Colors.transparent,
+                                          size: 20,
+                                        ),
+                                        options: FFButtonOptions(
+                                          width: 200,
+                                          height: 40,
+                                          color: Colors.white,
+                                          textStyle: GoogleFonts.getFont(
+                                            'Roboto',
+                                            color: Color(0xFF1877F2),
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 15,
+                                          ),
+                                          elevation: 4,
+                                          borderSide: BorderSide(
+                                            color: Colors.transparent,
+                                            width: 0,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(-0.72, -0.12),
+                                      child: Container(
+                                        width: 22,
+                                        height: 22,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Image.network(
+                                          'https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512',
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ],

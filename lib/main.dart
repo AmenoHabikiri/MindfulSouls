@@ -116,9 +116,8 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'myTasks': MyTasksWidget(),
-      'CompletedTasks': CompletedTasksWidget(),
       'MyProfile': MyProfileWidget(),
+      'myTasks': MyTasksWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(
@@ -135,38 +134,26 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.playlist_add,
+              Icons.account_circle_sharp,
               size: 32,
             ),
             activeIcon: Icon(
-              Icons.playlist_add,
-              size: 32,
-            ),
-            label: 'My Tasks',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.alarm_on,
-              size: 32,
-            ),
-            activeIcon: Icon(
-              Icons.alarm_on,
-              size: 32,
-            ),
-            label: 'Completed',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_outline,
-              size: 32,
-            ),
-            activeIcon: Icon(
-              Icons.person_sharp,
+              Icons.account_circle_sharp,
               size: 32,
             ),
             label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_rounded,
+              size: 32,
+            ),
+            activeIcon: Icon(
+              Icons.home_rounded,
+              size: 32,
+            ),
+            label: 'My Tasks',
             tooltip: '',
           )
         ],

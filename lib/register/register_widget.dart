@@ -22,6 +22,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
   TextEditingController fullNameController;
   TextEditingController passwordTextController;
   bool passwordVisibility1;
+  TextEditingController textController3;
+  TextEditingController textController4;
+  TextEditingController textController5;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -33,6 +36,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
     fullNameController = TextEditingController();
     passwordTextController = TextEditingController();
     passwordVisibility1 = false;
+    textController3 = TextEditingController();
+    textController4 = TextEditingController();
+    textController5 = TextEditingController();
   }
 
   @override
@@ -81,46 +87,41 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                            child: TextFormField(
-                              controller: fullNameController,
-                              obscureText: false,
-                              decoration: InputDecoration(
-                                labelText: 'Full Name',
-                                hintText: 'Enter your name here...',
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF102858),
-                                    width: 2,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
+                          TextFormField(
+                            controller: fullNameController,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Full Name',
+                              hintText: 'Enter your name here...',
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFF102858),
+                                  width: 2,
                                 ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xFF102858),
-                                    width: 2,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                filled: true,
-                                fillColor: Color(0xFFF3E9DC),
+                                borderRadius: BorderRadius.circular(8),
                               ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Raleway',
-                                    color: Color(0xFF102858),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                              keyboardType: TextInputType.emailAddress,
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFF102858),
+                                  width: 2,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              filled: true,
+                              fillColor: Color(0xFFF3E9DC),
                             ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Raleway',
+                                      color: Color(0xFF102858),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                            keyboardType: TextInputType.emailAddress,
                           ),
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                             child: TextFormField(
                               controller: emailTextController,
                               obscureText: false,
@@ -157,7 +158,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           ),
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                             child: TextFormField(
                               controller: passwordTextController,
                               obscureText: !passwordVisibility1,
@@ -207,7 +208,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           ),
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                             child: TextFormField(
                               controller: confirmPasswordTextController,
                               obscureText: !passwordVisibility2,
@@ -255,9 +256,143 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   ),
                             ),
                           ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Expanded(
+                                child: Align(
+                                  alignment: AlignmentDirectional(-1, 0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 10, 0, 0),
+                                    child: Container(
+                                      width: 150,
+                                      child: TextFormField(
+                                        controller: textController3,
+                                        obscureText: false,
+                                        decoration: InputDecoration(
+                                          labelText: 'Age',
+                                          hintText: 'Your age...',
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Color(0xFF102858),
+                                              width: 2,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Color(0xFF102858),
+                                              width: 2,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          filled: true,
+                                          fillColor: Color(0xFFF3E9DC),
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Raleway',
+                                              color: Color(0xFF102858),
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Align(
+                                  alignment: AlignmentDirectional(-1, 0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 10, 0, 0),
+                                    child: Container(
+                                      width: 150,
+                                      child: TextFormField(
+                                        controller: textController4,
+                                        obscureText: false,
+                                        decoration: InputDecoration(
+                                          labelText: 'Gender',
+                                          hintText: 'M/F',
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Color(0xFF102858),
+                                              width: 2,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Color(0xFF102858),
+                                              width: 2,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                          filled: true,
+                                          fillColor: Color(0xFFF3E9DC),
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Raleway',
+                                              color: Color(0xFF102858),
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                            child: TextFormField(
+                              controller: textController5,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelText: 'Phone',
+                                hintText: 'Enter your phonr number here...',
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF102858),
+                                    width: 2,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Color(0xFF102858),
+                                    width: 2,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                filled: true,
+                                fillColor: Color(0xFFF3E9DC),
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Raleway',
+                                    color: Color(0xFF102858),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                              keyboardType: TextInputType.phone,
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 if (passwordTextController?.text !=
@@ -283,6 +418,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
 
                                 final usersCreateData = createUsersRecordData(
                                   displayName: fullNameController.text,
+                                  password: confirmPasswordTextController.text,
+                                  email: emailTextController.text,
+                                  age: int.parse(textController3.text),
+                                  gender: textController4.text,
                                 );
                                 await UsersRecord.collection
                                     .doc(user.uid)
