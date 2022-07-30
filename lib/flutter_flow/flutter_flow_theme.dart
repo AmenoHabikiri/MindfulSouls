@@ -113,16 +113,16 @@ class ThemeTypography extends Typography {
         fontWeight: FontWeight.normal,
         fontSize: 16,
       );
-  String get bodyText1Family => 'Lexend Deca';
+  String get bodyText1Family => 'Raleway';
   TextStyle get bodyText1 => GoogleFonts.getFont(
-        'Lexend Deca',
-        color: theme.white,
+        'Raleway',
+        color: theme.tertiaryColor,
         fontWeight: FontWeight.normal,
         fontSize: 14,
       );
-  String get bodyText2Family => 'Lexend Deca';
+  String get bodyText2Family => 'Raleway';
   TextStyle get bodyText2 => GoogleFonts.getFont(
-        'Lexend Deca',
+        'Raleway',
         color: theme.tertiaryColor,
         fontWeight: FontWeight.normal,
         fontSize: 12,

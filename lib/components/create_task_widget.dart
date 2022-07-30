@@ -73,7 +73,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget> {
                   Text(
                     'Fill out the details below to add a new task.',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Lexend Deca',
+                          fontFamily: 'Raleway',
                           color: FlutterFlowTheme.of(context).tertiaryColor,
                         ),
                   ),
@@ -88,12 +88,12 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget> {
                 decoration: InputDecoration(
                   labelText: 'Task Name',
                   labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                       ),
                   hintText: 'Enter your task here....',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                       ),
                   enabledBorder: OutlineInputBorder(
@@ -124,12 +124,12 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget> {
                 decoration: InputDecoration(
                   labelText: 'Details',
                   labelStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                       ),
                   hintText: 'Enter a description here...',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                       ),
                   enabledBorder: OutlineInputBorder(
@@ -184,7 +184,7 @@ class _CreateTaskWidgetState extends State<CreateTaskWidget> {
                     child: Text(
                       dateTimeFormat('MMMEd', datePicked),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lexend Deca',
+                            fontFamily: 'Raleway',
                             color: FlutterFlowTheme.of(context).tertiaryColor,
                           ),
                     ),

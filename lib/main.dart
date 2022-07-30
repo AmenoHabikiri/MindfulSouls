@@ -77,13 +77,10 @@ class _MyAppState extends State<MyApp> {
       home: initialUser == null || displaySplashImage
           ? Container(
               color: Colors.transparent,
-              child: Center(
-                child: Builder(
-                  builder: (context) => Image.asset(
-                    'assets/images/todo_0.0_Splash@3x.png',
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    fit: BoxFit.fitWidth,
-                  ),
+              child: Builder(
+                builder: (context) => Image.asset(
+                  'assets/images/10.png',
+                  fit: BoxFit.cover,
                 ),
               ),
             )
@@ -105,7 +102,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPage = 'MyProfile';
+  String _currentPage = 'HomePage';
 
   @override
   void initState() {
@@ -117,7 +114,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'MyProfile': MyProfileWidget(),
-      'myTasks': MyTasksWidget(),
+      'HomePage': HomePageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
     return Scaffold(

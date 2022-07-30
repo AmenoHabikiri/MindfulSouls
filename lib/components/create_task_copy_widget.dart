@@ -74,7 +74,7 @@ class _CreateTaskCopyWidgetState extends State<CreateTaskCopyWidget> {
                   Text(
                     'Fill out the details below to add a new task.',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Lexend Deca',
+                          fontFamily: 'Raleway',
                           color: FlutterFlowTheme.of(context).tertiaryColor,
                         ),
                   ),
@@ -90,7 +90,7 @@ class _CreateTaskCopyWidgetState extends State<CreateTaskCopyWidget> {
                   labelText: 'Task Name',
                   hintText: 'Enter your task here....',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                       ),
                   enabledBorder: OutlineInputBorder(
@@ -120,7 +120,7 @@ class _CreateTaskCopyWidgetState extends State<CreateTaskCopyWidget> {
                   labelText: 'Details',
                   hintText: 'Enter a description here...',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                       ),
                   enabledBorder: OutlineInputBorder(
@@ -152,7 +152,7 @@ class _CreateTaskCopyWidgetState extends State<CreateTaskCopyWidget> {
                   labelText: 'Due Date / Time',
                   hintText: 'Enter your task here....',
                   hintStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lexend Deca',
+                        fontFamily: 'Raleway',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                       ),
                   enabledBorder: OutlineInputBorder(

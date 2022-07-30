@@ -64,7 +64,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                     child: Text(
                       'Register',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lexend Deca',
+                            fontFamily: 'Raleway',
                             fontSize: 36,
                             fontWeight: FontWeight.w800,
                           ),
@@ -431,7 +431,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        NavBarPage(initialPage: 'MyProfile'),
+                                        NavBarPage(initialPage: 'HomePage'),
                                   ),
                                   (r) => false,
                                 );
@@ -474,7 +474,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
-                                          fontFamily: 'Lexend Deca',
+                                          fontFamily: 'Raleway',
                                           color: FlutterFlowTheme.of(context)
                                               .tertiaryColor,
                                         ),

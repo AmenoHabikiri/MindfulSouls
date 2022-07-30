@@ -236,7 +236,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          NavBarPage(initialPage: 'MyProfile'),
+                                          NavBarPage(initialPage: 'HomePage'),
                                     ),
                                     (r) => false,
                                   );
@@ -280,7 +280,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(
-                                            fontFamily: 'Lexend Deca',
+                                            fontFamily: 'Raleway',
                                             color: FlutterFlowTheme.of(context)
                                                 .darkBG,
                                           ),

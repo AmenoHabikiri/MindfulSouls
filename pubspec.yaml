@@ -25,6 +25,10 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  assets_audio_player:
+    git:
+      url: https://github.com/asmengistu/Flutter-AssetsAudioPlayer
+      ref: d5f2a5b928ae118154aaf3ac2f1df96e301cb4af
   auto_size_text: 3.0.0
   built_collection: 5.1.1
   built_value: 8.1.3
