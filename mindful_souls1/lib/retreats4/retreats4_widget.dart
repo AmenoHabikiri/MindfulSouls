@@ -46,7 +46,7 @@ class _Retreats4WidgetState extends State<Retreats4Widget> {
           },
         ),
         title: Text(
-          'BlissFull Self',
+          'BlissFul Self',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lexend Deca',
                 color: Colors.white,

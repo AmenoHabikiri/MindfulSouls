@@ -177,7 +177,7 @@ class _GuidedPracticesCompassionateMindWidgetState
                       audio: Audio(
                         'assets/audios/COMPASSIONATE-MIND.mp3',
                         metas: Metas(
-                          id: 'COMPASSIONATE-MIND.mp3-k0x6xufo',
+                          id: 'COMPASSIONATE-MIND.mp3-fhwqa7ys',
                           title: 'Compassionate Mind',
                         ),
                       ),

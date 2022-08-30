@@ -177,7 +177,7 @@ class _GuidedPracticesMindfulSpeechWidgetState
                       audio: Audio(
                         'assets/audios/MINDFUL-SPEECH.mp3',
                         metas: Metas(
-                          id: 'MINDFUL-SPEECH.mp3-s6gdyvf5',
+                          id: 'MINDFUL-SPEECH.mp3-og8aflje',
                           title: 'Mindful Speech',
                         ),
                       ),

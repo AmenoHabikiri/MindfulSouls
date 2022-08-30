@@ -95,7 +95,7 @@ class _GuidedPracticesConnectingwithnatureWidgetState
                                             borderRadius:
                                                 BorderRadius.circular(12),
                                             child: Image.asset(
-                                              'assets/images/Awareness.png',
+                                              'assets/images/Connecting_with_nature.png',
                                               width: 80,
                                               height: 80,
                                               fit: BoxFit.cover,
@@ -177,7 +177,7 @@ class _GuidedPracticesConnectingwithnatureWidgetState
                       audio: Audio(
                         'assets/audios/CONNECTING-WITH-NATURE.mp3',
                         metas: Metas(
-                          id: 'CONNECTING-WITH-NATURE.mp3-7k2l20uo',
+                          id: 'CONNECTING-WITH-NATURE.mp3-tc44p2jb',
                           title: 'Connecting with Nature',
                         ),
                       ),

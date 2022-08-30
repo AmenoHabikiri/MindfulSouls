@@ -96,7 +96,7 @@ class _GuidedPracticesCompassionforalllivingbeingsWidgetState
                                             borderRadius:
                                                 BorderRadius.circular(12),
                                             child: Image.asset(
-                                              'assets/images/Compassionate_mind.png',
+                                              'assets/images/Compassion_for_living_beings.png',
                                               width: 80,
                                               height: 80,
                                               fit: BoxFit.cover,
@@ -178,7 +178,7 @@ class _GuidedPracticesCompassionforalllivingbeingsWidgetState
                       audio: Audio(
                         'assets/audios/COMPASSION-FOR-LIVING-BEINGS.mp3',
                         metas: Metas(
-                          id: 'COMPASSION-FOR-LIVING-BEINGS.mp3-8to97qne',
+                          id: 'COMPASSION-FOR-LIVING-BEINGS.mp3-hx00wcin',
                           title: 'Compassion for all living beings',
                         ),
                       ),

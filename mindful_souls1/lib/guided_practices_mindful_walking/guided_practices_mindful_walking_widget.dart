@@ -177,7 +177,7 @@ class _GuidedPracticesMindfulWalkingWidgetState
                       audio: Audio(
                         'assets/audios/MINDFUL-WALKING.mp3',
                         metas: Metas(
-                          id: 'MINDFUL-WALKING.mp3-x4n703yw',
+                          id: 'MINDFUL-WALKING.mp3-k4wflt7f',
                           title: 'Mindful Walking',
                         ),
                       ),

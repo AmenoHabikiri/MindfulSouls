@@ -178,7 +178,7 @@ class _GuidedPracticesSelfLoveandCompassionWidgetState
                       audio: Audio(
                         'assets/audios/SELF-LOVE-COMPASSION.mp3',
                         metas: Metas(
-                          id: 'SELF-LOVE-COMPASSION.mp3-hgpecjm9',
+                          id: 'SELF-LOVE-COMPASSION.mp3-zj71la6w',
                           title: 'Self-love and Compassion',
                         ),
                       ),

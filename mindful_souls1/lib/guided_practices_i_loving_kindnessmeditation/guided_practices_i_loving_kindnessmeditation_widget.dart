@@ -178,7 +178,7 @@ class _GuidedPracticesILovingKindnessmeditationWidgetState
                       audio: Audio(
                         'assets/audios/LOVING-KINDNESS-MEDITATION.mp3',
                         metas: Metas(
-                          id: 'LOVING-KINDNESS-MEDITATION.mp3-bi47f35b',
+                          id: 'LOVING-KINDNESS-MEDITATION.mp3-b9opbd2g',
                           title: 'Loving-Kindness meditation',
                         ),
                       ),

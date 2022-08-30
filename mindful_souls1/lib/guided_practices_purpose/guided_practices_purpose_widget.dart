@@ -95,7 +95,7 @@ class _GuidedPracticesPurposeWidgetState
                                             borderRadius:
                                                 BorderRadius.circular(12),
                                             child: Image.asset(
-                                              'assets/images/Awareness.png',
+                                              'assets/images/Purpose.png',
                                               width: 80,
                                               height: 80,
                                               fit: BoxFit.cover,
@@ -177,7 +177,7 @@ class _GuidedPracticesPurposeWidgetState
                       audio: Audio(
                         'assets/audios/PURPOSE.mp3',
                         metas: Metas(
-                          id: 'PURPOSE.mp3-tj77nepf',
+                          id: 'PURPOSE.mp3-m7i8179l',
                           title: 'Purpose',
                         ),
                       ),

@@ -95,7 +95,7 @@ class _GuidedPracticesGratitudeWidgetState
                                             borderRadius:
                                                 BorderRadius.circular(12),
                                             child: Image.asset(
-                                              'assets/images/Gratitude_to_the_planet.png',
+                                              'assets/images/Gratitude_.png',
                                               width: 80,
                                               height: 80,
                                               fit: BoxFit.cover,
@@ -177,7 +177,7 @@ class _GuidedPracticesGratitudeWidgetState
                       audio: Audio(
                         'assets/audios/GRATITUDE.mp3',
                         metas: Metas(
-                          id: 'GRATITUDE.mp3-ql78riik',
+                          id: 'GRATITUDE.mp3-8471vvo6',
                           title: 'Gratitude',
                         ),
                       ),

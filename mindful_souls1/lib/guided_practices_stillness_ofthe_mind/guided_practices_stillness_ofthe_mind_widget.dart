@@ -95,7 +95,7 @@ class _GuidedPracticesStillnessOftheMindWidgetState
                                             borderRadius:
                                                 BorderRadius.circular(12),
                                             child: Image.asset(
-                                              'assets/images/Awareness.png',
+                                              'assets/images/Stillness_of_mind.png',
                                               width: 80,
                                               height: 80,
                                               fit: BoxFit.cover,
@@ -177,7 +177,7 @@ class _GuidedPracticesStillnessOftheMindWidgetState
                       audio: Audio(
                         'assets/audios/STILLNESS-OF-MIND.mp3',
                         metas: Metas(
-                          id: 'STILLNESS-OF-MIND.mp3-8dcz9tw5',
+                          id: 'STILLNESS-OF-MIND.mp3-3qbb8m6d',
                           title: 'Stillness of the Mind',
                         ),
                       ),

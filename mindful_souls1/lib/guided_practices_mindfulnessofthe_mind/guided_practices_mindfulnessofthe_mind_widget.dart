@@ -177,7 +177,7 @@ class _GuidedPracticesMindfulnessoftheMindWidgetState
                       audio: Audio(
                         'assets/audios/MINDFULNESS-OF-THE-MIND.mp3',
                         metas: Metas(
-                          id: 'MINDFULNESS-OF-THE-MIND.mp3-q504u2zu',
+                          id: 'MINDFULNESS-OF-THE-MIND.mp3-tjh5ub2f',
                           title: 'Mindfulness of the Mind',
                         ),
                       ),

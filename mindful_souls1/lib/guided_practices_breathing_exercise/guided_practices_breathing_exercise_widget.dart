@@ -178,7 +178,7 @@ class _GuidedPracticesBreathingExerciseWidgetState
                       audio: Audio(
                         'assets/audios/BREATHING-FINAL.mp3',
                         metas: Metas(
-                          id: 'BREATHING-FINAL.mp3-xo7zsyk5',
+                          id: 'BREATHING-FINAL.mp3-df5mnmmk',
                           title: 'Breathing Exercise',
                         ),
                       ),
