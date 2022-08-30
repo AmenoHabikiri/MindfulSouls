@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesMindfulListeningWidget extends StatefulWidget {
-  const GuidedPracticesMindfulListeningWidget({Key key}) : super(key: key);
+  const GuidedPracticesMindfulListeningWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesMindfulListeningWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesMindfulListeningWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesMindfulListeningWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +143,10 @@ class _GuidedPracticesMindfulListeningWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    65, 145, 65, 0),
                                 child: Text(
-                                  'Welcome to the Mindful Listening practice! This is a short practice where we will learn to listen to the words mindfully with all our awareness rested on the sounds, emotions  & the source.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to the Mindful Listening practice! This is a short practice where we will learn to listen to the words mindfully with all our awareness rested on the sounds, emotions  & the source.\n',
+                                  textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +156,6 @@ class _GuidedPracticesMindfulListeningWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tFind a comfortable position, whether you are sitting on the floor, on a chair, or laying on a mat.\n•\tSlowly, take in 3 deep breaths – in through the nose, and out through your mouth.\n•\tBreathe in, relax and soften your body, breathe out.\n•\tOne more time, breathe in all the way down to your stomach. Watch as your stomach expands. Breathe out, and ease into your body.\n•\tTake a moment here, to relax the muscles in your feet, your legs, your stomach. Relax your back, shoulders, and face muscles. \n•\tAs you continue breathing, try and rest your awareness on the sounds around you. You may hear the sound of a fan or moving traffic; birds chirping outside or even the sound of your own breath. \n•\tWhichever sound is close to you, gently bring it to the foreground of your attention.\n•\tObserve the sounds, watch them stay the same, or change in a surprising manner.\n•\tNow, listen closely to the tone being played. Focus on the tone for as long as it lasts, and when it ends, try to replay it in your mind. [PLAY TONE].\n•\tIf your focus shifts, gently guide it back to the tone. \n•\t[END TONE].\n•\tAs this exercise comes to an end, thank yourself for showing up today.\n•\tBring your awareness back to the room, and when you feel ready, slowly open your eyes.\n\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesMindfulListeningWidgetState
                       audio: Audio(
                         'assets/audios/MINDFUL-LISTENING.mp3',
                         metas: Metas(
-                          id: 'MINDFUL-LISTENING.mp3-pc345kus',
+                          id: 'MINDFUL-LISTENING.mp3-ujjfi9a2',
                           title: 'Mindful Listeing',
                         ),
                       ),

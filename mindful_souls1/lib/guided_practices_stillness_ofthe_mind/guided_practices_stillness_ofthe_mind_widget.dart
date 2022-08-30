@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesStillnessOftheMindWidget extends StatefulWidget {
-  const GuidedPracticesStillnessOftheMindWidget({Key key}) : super(key: key);
+  const GuidedPracticesStillnessOftheMindWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesStillnessOftheMindWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesStillnessOftheMindWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesStillnessOftheMindWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,9 +143,9 @@ class _GuidedPracticesStillnessOftheMindWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 130, 60, 0),
                                 child: Text(
-                                  'Welcome to this practice where you will learn to bring your mind in a state of stillness. A mind free of thoughts, worries and judgements. Before beginning the practice, put your phones on silent and choose a relaxed environment.\n\nInstructions:',
+                                  'Welcome to this practice where you will learn to bring your mind in a state of stillness. A mind free of thoughts, worries and judgements. Before beginning the practice, put your phones on silent and choose a relaxed environment.\n',
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
@@ -173,40 +156,6 @@ class _GuidedPracticesStillnessOftheMindWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tYou may sit or lay down in a comfortable position before we begin.\n•\tNow as you start to feel comfortable, gently close your eyes.\n•\tRelax your facial muscles and breathe in.\n•\tInhale the fresh air through your nostrils and exhale through your mouth. \n•\tGuide your awareness to my voice.\n•\tImagine yourself sitting on the bank of this lake, enjoying the freshness of nature.\n•\tIf you pick a pebble and throw it into the lake you will see a splash of water and ripples spreading on the surface of the still lake.\n•\tThink of your mind as this lake and the pebbles as thoughts. When our minds need to remain still, we start to bring thoughts in our minds. Do we let it stay still? \n•\tWe never give it a rest; we are constantly thinking. \n•\tNow imagine what will happen if pick some good number of pebbles in our hands and throw them altogether into the lake? \n•\tYou might see a big splash of water and bigger ripples covering the whole surface of lake.  \n•\tSimilarly, when we let multiple thoughts enter in our minds, we disrupt our calmness and overwhelm ourselves with emotions and thoughts.\n•\tLet’s try to bring our minds in the still state just like the lake with the help of Mindful Breathing. \n•\tThere are no ripples, no splashes. It is just still. Does the lake look calmer now? \n•\tTake a deep breath and let the fresh air flow in your body, expand your lungs.\n•\tNow exhale by breathing out the air through your nostrils, notice how your lungs contracts.\n•\tIs your mind still? Do you feel calm? \n•\tNow as we come to the end of this practice, guide your awareness back to the room.\n•\tYou can practice this for as long as you want. \n•\tNow, gently open your eyes.\n•\tLook around, do you see calm minds?',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesStillnessOftheMindWidgetState
                       audio: Audio(
                         'assets/audios/STILLNESS-OF-MIND.mp3',
                         metas: Metas(
-                          id: 'STILLNESS-OF-MIND.mp3-ykeni6lj',
+                          id: 'STILLNESS-OF-MIND.mp3-8dcz9tw5',
                           title: 'Stillness of the Mind',
                         ),
                       ),

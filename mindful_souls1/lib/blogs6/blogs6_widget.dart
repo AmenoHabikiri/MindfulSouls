@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Blogs6Widget extends StatefulWidget {
-  const Blogs6Widget({Key key}) : super(key: key);
+  const Blogs6Widget({Key? key}) : super(key: key);
 
   @override
   _Blogs6WidgetState createState() => _Blogs6WidgetState();

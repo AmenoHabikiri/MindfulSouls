@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.mindfulsouls.mindfulsouls1"
+    package="org.mindfulsouls.mindfulsouls"
     xmlns:tools="http://schemas.android.com/tools">
    <uses-permission android:name="android.permission.INTERNET"/>
+
 
    <application
         android:label="MindfulSouls1"

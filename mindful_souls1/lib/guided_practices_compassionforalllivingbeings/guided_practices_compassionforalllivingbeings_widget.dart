@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesCompassionforalllivingbeingsWidget extends StatefulWidget {
-  const GuidedPracticesCompassionforalllivingbeingsWidget({Key key})
+  const GuidedPracticesCompassionforalllivingbeingsWidget({Key? key})
       : super(key: key);
 
   @override
@@ -26,28 +25,6 @@ class _GuidedPracticesCompassionforalllivingbeingsWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -73,6 +50,12 @@ class _GuidedPracticesCompassionforalllivingbeingsWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -161,10 +144,10 @@ class _GuidedPracticesCompassionforalllivingbeingsWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    65, 130, 65, 0),
                                 child: Text(
-                                  'Welcome to this short exercise where we will practice compassion for all the living beings around us. This practice is to nurture compassion in our heart. This practice is to be exercised whenever we see those who need our help.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to this short exercise where we will practice compassion for all the living beings around us. This practice is to nurture compassion in our heart. This practice is to be exercised whenever we see those who need our help.',
+                                  textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -174,40 +157,6 @@ class _GuidedPracticesCompassionforalllivingbeingsWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tTo begin, sit on a comfortable chair or on the floor. You may use support to keep your spine straight.\n•\tFor a few moments inhale and exhale to let your brain get a splash of fresh air. Notice your body relaxing with the inflow of fresh air.\n•\tWith each exhale, let your mind be empty from all thoughts that are not relevant to this moment. \n•\tNow guide your awareness to all the living beings in the world. Do you see animals, birds, all other creatures? Remember that during the human evolution, lot many animals and birds helped us survive. To carry the goods, to travel, messaging, scientific researches, hunting and more. Know that even in the modern world, humanity can not survive without at least 5 species. But there are also species who can not survive without humans. To balance life on the planet we need other living beings than humans and we must give back to the ones who need us.\n•\tDo you feel connected with the circle of life on the planet. We need each other to keep life blossoming. \n•\tTake a few deep breaths in and feel love and compassion for other living beings.\n•\tAs your heart fills with compassion, take this pledge if you’re ready “I pledge to not hurt only love and care about all living beings. Because I choose to support life on the planet. I am a compassionate soul.”\n•\tNotice as you pledge, your soul feels connected with life on the planet. Feel proud for yourself. \n•\tWhen ready, open your eyes gently. You’ll see the magical experience of life and love around you.\n•\tNext time you go out and see a life in need, let all the love and compassion flow from your heart to others. Do what you can to help other living beings.\n•\tNotice as you do things for others, your heart immediately fills with joy. Love and gratitude comes back to you in many ways as we connect with life around us.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -229,7 +178,7 @@ class _GuidedPracticesCompassionforalllivingbeingsWidgetState
                       audio: Audio(
                         'assets/audios/COMPASSION-FOR-LIVING-BEINGS.mp3',
                         metas: Metas(
-                          id: 'COMPASSION-FOR-LIVING-BEINGS.mp3-2v9z1shn',
+                          id: 'COMPASSION-FOR-LIVING-BEINGS.mp3-8to97qne',
                           title: 'Compassion for all living beings',
                         ),
                       ),

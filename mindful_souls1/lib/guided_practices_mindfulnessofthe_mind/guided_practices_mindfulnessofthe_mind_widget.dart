@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesMindfulnessoftheMindWidget extends StatefulWidget {
-  const GuidedPracticesMindfulnessoftheMindWidget({Key key}) : super(key: key);
+  const GuidedPracticesMindfulnessoftheMindWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesMindfulnessoftheMindWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesMindfulnessoftheMindWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesMindfulnessoftheMindWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +143,10 @@ class _GuidedPracticesMindfulnessoftheMindWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 150, 60, 0),
                                 child: Text(
-                                  'Welcome to this short practice where we will learn to guide our awareness to understand the nature of our mind. It’s important to find a quiet place to do this practice.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to this short practice where we will learn to guide our awareness to understand the nature of our mind. It’s important to find a quiet place to do this practice.',
+                                  textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +156,6 @@ class _GuidedPracticesMindfulnessoftheMindWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tTo begin, choose a comfortable position to sit. You may choose to sit on a chair but sitting on the ground is recommended.\n•\tGently close your eyes and begin Mindful breathing practice for a few moments.\n•\tOnce you feel your mind and body united in the present moment, scan your body for any uncomfortable emotions. It can be fear hiding somewhere in your belly or perhaps anxiety or guilt in your heart.\n•\tBreath in compassionately and let go of all the negative emotions through your nostrils to the cosmos.\n•\tNow, Scan your mind for any unwanted or worrisome thoughts from the past or the future. Notice if they are uninvited or do they have a reason to be here.\n•\tWhatever the case is, breathe in compassionately and let these thoughts out.\n•\tNow scan your mind and body again. Are they both still in the present moment? Ensure there are no worrisome thoughts or negative emotions present.\n•\tNow gently breathe in shallow and guide your awareness to your mind. It’s alright if new thoughts or sensations begin to arise. Simply let those thoughts travel out as you exhale.\n•\tYou’ll notice another thought has arisen. Perhaps a new emotional experience too.\n•\tEven if there is no thought in the mind, the idea of a no thought is also a thought. All your thoughts will arise from an emotional experience.\n•\tYou will notice that this is the true nature of the mind. Always busy in feeling & thinking. What we think and feel is driven by our awareness.\n•\tAccept the true nature of the mind and begin to guide your awareness at your will. This will require a lot of time & practice.\n•\tWith time and conviction, you will realise that your wandering mind now wanders at will. Whether you want to be in peace in the moment or feel joyful, your guided awareness has the power to bring you both.\n•\tPracticing awareness brings blissfulness to your mind. Open your eyes gently with the blissfulness in heart.\n•\tYou are on your path to become an aware soul.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesMindfulnessoftheMindWidgetState
                       audio: Audio(
                         'assets/audios/MINDFULNESS-OF-THE-MIND.mp3',
                         metas: Metas(
-                          id: 'MINDFULNESS-OF-THE-MIND.mp3-q4fo1d3b',
+                          id: 'MINDFULNESS-OF-THE-MIND.mp3-q504u2zu',
                           title: 'Mindfulness of the Mind',
                         ),
                       ),

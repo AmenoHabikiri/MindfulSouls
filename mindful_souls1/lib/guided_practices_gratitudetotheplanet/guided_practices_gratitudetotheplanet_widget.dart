@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesGratitudetotheplanetWidget extends StatefulWidget {
-  const GuidedPracticesGratitudetotheplanetWidget({Key key}) : super(key: key);
+  const GuidedPracticesGratitudetotheplanetWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesGratitudetotheplanetWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesGratitudetotheplanetWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesGratitudetotheplanetWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +143,10 @@ class _GuidedPracticesGratitudetotheplanetWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 160, 60, 0),
                                 child: Text(
-                                  'Welcome to this short practice where we’ll express our gratitude to the planet that gives us everything to live.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to this short practice where we’ll express our gratitude to the planet that gives us everything to live.',
+                                  textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +156,6 @@ class _GuidedPracticesGratitudetotheplanetWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tFind a comfortable sitting position on the floor or on a chair. Keep your back straight. You may lean your back against the wall If you need support.\n•\tBefore we begin, bring your awareness to the moment by practicing mindful breathing for a few moments. \n•\tAs you feel your mind and body present in this moment, guide your awareness to scan your body. \n•\tIs your body healthy? Did you eat well? \n•\tNow broaden your awareness to the clothes you are wearing and the things you have around you? Can you live a comfortable life without the things you need?  Where did all these things come from?\n•\tAs your mind begins to ponder, take a deep breath and breathe out. Let each exhale express your gratitude to the planet for all the nourishment we get, for the rivers, food, water, clothes and everything around us.\n•\tContinue breathing in let your grateful mind and heart express gratitude. \n•\tObserve the more gratitude you express, more love the nature sends back to you. Breathe in love, breathe out gratitude.\n•\tThere is joy in this practice. Continue to be joyful for as long as you like.\n•\tYou may gently open your eyes when you feel the need.\n•\tYour heart is filled with joy. Everything around seems beautiful when the mind and heart are joyful.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesGratitudetotheplanetWidgetState
                       audio: Audio(
                         'assets/audios/GRATITUDE-TO-THE-PLANET.mp3',
                         metas: Metas(
-                          id: 'GRATITUDE-TO-THE-PLANET.mp3-xbzg2r5e',
+                          id: 'GRATITUDE-TO-THE-PLANET.mp3-hu64pc2f',
                           title: 'Gratitude to the planet ',
                         ),
                       ),

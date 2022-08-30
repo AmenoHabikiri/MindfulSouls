@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>650850116573-o5bk1mterpu2cva4mavm2dkb4r0gpti2.apps.googleusercontent.com</string>
+	<string>398106642181-sullthe7cgr5tji609i2n1u5a7f5ndr5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.650850116573-o5bk1mterpu2cva4mavm2dkb4r0gpti2</string>
+	<string>com.googleusercontent.apps.398106642181-sullthe7cgr5tji609i2n1u5a7f5ndr5</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>650850116573-147pedbrilkng7qe0ipv087kkefqo1vv.apps.googleusercontent.com</string>
+	<string>398106642181-shri92k3v7fgs4ij0ohtrlcgb26ss9jo.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD52DGm2SpFN7R3kH2SS5msJM6HOOzaFQ0</string>
+	<string>AIzaSyDrEVB5kKYAze-8ZVMtrESF1ovXf3oH_Sc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>650850116573</string>
+	<string>398106642181</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>org.mindfulsouls.mindfulsouls1</string>
+	<string>org.mindfulsouls.mindfulsouls</string>
 	<key>PROJECT_ID</key>
-	<string>mindfulsouls-80e7f</string>
+	<string>mindfulsouls-99f50</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mindfulsouls-80e7f.appspot.com</string>
+	<string>mindfulsouls-99f50.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:650850116573:ios:12ea780bea95186b15cc34</string>
+	<string>1:398106642181:ios:7b72469edaa1e8cce6196c</string>
 </dict>
 </plist>

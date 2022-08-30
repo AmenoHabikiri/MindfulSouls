@@ -1,13 +1,13 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesSelfLoveandCompassionWidget extends StatefulWidget {
-  const GuidedPracticesSelfLoveandCompassionWidget({Key key}) : super(key: key);
+  const GuidedPracticesSelfLoveandCompassionWidget({Key? key})
+      : super(key: key);
 
   @override
   _GuidedPracticesSelfLoveandCompassionWidgetState createState() =>
@@ -25,28 +25,6 @@ class _GuidedPracticesSelfLoveandCompassionWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +50,12 @@ class _GuidedPracticesSelfLoveandCompassionWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +144,10 @@ class _GuidedPracticesSelfLoveandCompassionWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 125, 60, 0),
                                 child: Text(
-                                  'With this practice, we take an opportunity to express love and compassion for ourselves. This practice is very helpful when you feel stressed, anxious or guilty of something. You may choose to do this practice while stressed at work, at home or in your leisure time to feel loved.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'With this practice, we take an opportunity to express love and compassion for ourselves. This practice is very helpful when you feel stressed, anxious or guilty of something. You may choose to do this practice while stressed at work, at home or in your leisure time to feel loved.',
+                                  textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +157,6 @@ class _GuidedPracticesSelfLoveandCompassionWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tChoose a comfortable position. You may choose to sit on a chair or a couch. \n•\tTake a deep breath in and breath out. It’s alright if you feel uncomfortable for a few moments. Keep breathing in & breathing out.\n•\tAs you few moments, notice if you feel calmer. Guide your awareness to your mind, gently disconnecting from the world around you.\n•\tAs the awareness brightens your mind, all your thoughts & emotions become visible.\n•\tGently scan your thoughts and emotions. Notice if there is a worrisome thought or emotion. Is it bothering you or making your stressed. \n•\tRecall and incident from the day that disturbed your peace. Hold on to all these feelings.\n•\tNow gently bring your awareness to your breath. With each inhale, choose to breathe in all the love the universe has for you. With each breath out, let go of all the worrisome thoughts, feelings of guilt.\n•\tContinue breathing love & let everything else go.\n•\tDo you feel lighter? Can you observe sensations in your mind & heart?\n•\tWith next breath in, remind yourself that you deserve to be loved, you deserve care. Let go of your guilt & breathe in forgiveness. \n•\tContinue to use your breath as a reminder that you deserve goodness, peace and love. Let your heart fill with love for yourself. \n•\tDo you notice a bright light entering your body through your nostrils filled with love and care? Do you feel blessed?\n•\tNow, gently place both your hands on your heart. Feel the heart beating with compassion.\n•\tGently place both your hands on your eyes and let the warmth from your heart travel to your eyes and the mind.\n•\tWhen ready, gently open your eyes with a shallow exhale.\n•\tLove & peace to you.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +178,7 @@ class _GuidedPracticesSelfLoveandCompassionWidgetState
                       audio: Audio(
                         'assets/audios/SELF-LOVE-COMPASSION.mp3',
                         metas: Metas(
-                          id: 'SELF-LOVE-COMPASSION.mp3-4hfix1pz',
+                          id: 'SELF-LOVE-COMPASSION.mp3-hgpecjm9',
                           title: 'Self-love and Compassion',
                         ),
                       ),

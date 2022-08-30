@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesConnectingwithnatureWidget extends StatefulWidget {
-  const GuidedPracticesConnectingwithnatureWidget({Key key}) : super(key: key);
+  const GuidedPracticesConnectingwithnatureWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesConnectingwithnatureWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesConnectingwithnatureWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesConnectingwithnatureWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +143,10 @@ class _GuidedPracticesConnectingwithnatureWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    55, 175, 55, 0),
                                 child: Text(
-                                  'Hello! This is a short practice where you will connect with nature.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Hello! This is a short practice where you will connect with nature.',
+                                  textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +156,6 @@ class _GuidedPracticesConnectingwithnatureWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tTake a few moments to settle down and get comfortable. Relax and focus on your breathing.\n•\tNow, as you inhale count to 4. Pause for a moment and then exhale to the count of 4.\n•\tContinue to breathe as you count. Try to stretch each breath in and out till you can complete the count to 4.\n•\tClose your eyes if that feels comfortable.\n•\tNow take a few more breaths and imagine that you are walking on a nice green garden path with mountains in the distance. Perhaps you can see a small, calm mountain lake.\n•\tThe lake is beautiful and blue in color. You can stop and sit near the edge, maybe even dip your feet in the water.\n•\tAs you sit, you can watch fishes swimming just below the surface of the water.\n•\tYou can even see birds fly across the sky and beautiful tall trees as you look up from the water.\n•\tNow imagine a slight breeze blowing. Watch as this breeze sways the leaves on the trees, creating ripples in the water. Watch this breeze as it gently touches your face.\n•\tWatch as the sun shines high in the sky, with its beams streaming down; warming you and everything around you till you.\n•\tListen to the sound of water flowing, birds chirping.\n•\tImagine yourself being one with nature. \n•\tSimply notice the beauty that surrounds you.\n•\tRelax and breathe. Watch as everything around you becomes a part of you with your breath.\n•\tImagine yourself as one with nature.\n•\tKnow that you can visit this garden at any time, and that nature is always ready to meet you in all its glory.\n•\tGive thanks and carry this feeling of gratitude with yourself as you gently bring your awareness back to the room.\n•\tRub your hands together and place them on your eyes.\n•\tWhen you feel ready, slowly open your eyes. \n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesConnectingwithnatureWidgetState
                       audio: Audio(
                         'assets/audios/CONNECTING-WITH-NATURE.mp3',
                         metas: Metas(
-                          id: 'CONNECTING-WITH-NATURE.mp3-e6g871wz',
+                          id: 'CONNECTING-WITH-NATURE.mp3-7k2l20uo',
                           title: 'Connecting with Nature',
                         ),
                       ),

@@ -1,7 +1,7 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'auth/firebase_user_provider.dart';
 import 'auth/auth_util.dart';
 
@@ -24,15 +24,15 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 
   static _MyAppState of(BuildContext context) =>
-      context.findAncestorStateOfType<_MyAppState>();
+      context.findAncestorStateOfType<_MyAppState>()!;
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale _locale;
+  Locale? _locale;
   ThemeMode _themeMode = ThemeMode.system;
 
-  Stream<MindfulSouls1FirebaseUser> userStream;
-  MindfulSouls1FirebaseUser initialUser;
+  late Stream<MindfulSouls1FirebaseUser> userStream;
+  MindfulSouls1FirebaseUser? initialUser;
   bool displaySplashImage = true;
 
   final authUserSub = authenticatedUserStream.listen((_) {});
@@ -55,7 +55,8 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
 
-  void setLocale(Locale value) => setState(() => _locale = value);
+  void setLocale(String language) =>
+      setState(() => _locale = createLocale(language));
   void setThemeMode(ThemeMode mode) => setState(() {
         _themeMode = mode;
       });
@@ -79,12 +80,12 @@ class _MyAppState extends State<MyApp> {
               color: Colors.transparent,
               child: Builder(
                 builder: (context) => Image.asset(
-                  'assets/images/10.png',
-                  fit: BoxFit.cover,
+                  'assets/images/MS_LOGO.jpg',
+                  fit: BoxFit.fitWidth,
                 ),
               ),
             )
-          : currentUser.loggedIn
+          : currentUser!.loggedIn
               ? NavBarPage()
               : LoginWidget(),
     );
@@ -92,9 +93,9 @@ class _MyAppState extends State<MyApp> {
 }
 
 class NavBarPage extends StatefulWidget {
-  NavBarPage({Key key, this.initialPage}) : super(key: key);
+  NavBarPage({Key? key, this.initialPage}) : super(key: key);
 
-  final String initialPage;
+  final String? initialPage;
 
   @override
   _NavBarPageState createState() => _NavBarPageState();
@@ -113,7 +114,7 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'MyProfile': MyProfileWidget(),
+      'ProfilePage': ProfilePageWidget(),
       'HomePage': HomePageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPage);
@@ -138,7 +139,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.account_circle_sharp,
               size: 32,
             ),
-            label: 'Home',
+            label: 'My Tasks',
             tooltip: '',
           ),
           BottomNavigationBarItem(

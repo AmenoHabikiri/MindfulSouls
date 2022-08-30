@@ -3,11 +3,11 @@ import 'package:rxdart/rxdart.dart';
 
 class MindfulSouls1FirebaseUser {
   MindfulSouls1FirebaseUser(this.user);
-  User user;
+  User? user;
   bool get loggedIn => user != null;
 }
 
-MindfulSouls1FirebaseUser currentUser;
+MindfulSouls1FirebaseUser? currentUser;
 bool get loggedIn => currentUser?.loggedIn ?? false;
 Stream<MindfulSouls1FirebaseUser> mindfulSouls1FirebaseUserStream() =>
     FirebaseAuth.instance

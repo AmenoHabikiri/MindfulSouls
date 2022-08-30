@@ -2,11 +2,12 @@ import '../blogs/blogs_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Blogs2Widget extends StatefulWidget {
-  const Blogs2Widget({Key key}) : super(key: key);
+  const Blogs2Widget({Key? key}) : super(key: key);
 
   @override
   _Blogs2WidgetState createState() => _Blogs2WidgetState();
@@ -69,6 +70,12 @@ class _Blogs2WidgetState extends State<Blogs2Widget> {
                   height: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/bg.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,

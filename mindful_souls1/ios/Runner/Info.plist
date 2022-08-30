@@ -28,7 +28,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.650850116573-o5bk1mterpu2cva4mavm2dkb4r0gpti2</string>
+                <string>com.googleusercontent.apps.398106642181-sullthe7cgr5tji609i2n1u5a7f5ndr5</string>
                 
             </array>
         </dict>
@@ -40,6 +40,7 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+
 
 
 

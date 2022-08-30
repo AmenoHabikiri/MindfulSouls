@@ -8,19 +8,19 @@ abstract class FlutterFlowTheme {
     return LightModeTheme();
   }
 
-  Color primaryColor;
-  Color secondaryColor;
-  Color tertiaryColor;
-  Color alternate;
-  Color primaryBackground;
-  Color secondaryBackground;
-  Color primaryText;
-  Color secondaryText;
+  late Color primaryColor;
+  late Color secondaryColor;
+  late Color tertiaryColor;
+  late Color alternate;
+  late Color primaryBackground;
+  late Color secondaryBackground;
+  late Color primaryText;
+  late Color secondaryText;
 
-  Color white;
-  Color grayBG;
-  Color darkBG;
-  Color primaryBlack;
+  late Color white;
+  late Color grayBG;
+  late Color darkBG;
+  late Color primaryBlack;
 
   String get title1Family => typography.title1Family;
   TextStyle get title1 => typography.title1;
@@ -41,19 +41,19 @@ abstract class FlutterFlowTheme {
 }
 
 class LightModeTheme extends FlutterFlowTheme {
-  Color primaryColor = const Color(0xFFF3E9DC);
-  Color secondaryColor = const Color(0xFFDA6220);
-  Color tertiaryColor = const Color(0xFF102858);
-  Color alternate = const Color(0x00000000);
-  Color primaryBackground = const Color(0x00000000);
-  Color secondaryBackground = const Color(0x00000000);
-  Color primaryText = const Color(0x00000000);
-  Color secondaryText = const Color(0x00000000);
+  late Color primaryColor = const Color(0xFFF3E9DC);
+  late Color secondaryColor = const Color(0xFFDA6220);
+  late Color tertiaryColor = const Color(0xFF102858);
+  late Color alternate = const Color(0x00000000);
+  late Color primaryBackground = const Color(0x00000000);
+  late Color secondaryBackground = const Color(0x00000000);
+  late Color primaryText = const Color(0x00000000);
+  late Color secondaryText = const Color(0x00000000);
 
-  Color white = Color(0xFFFFFFFF);
-  Color grayBG = Color(0xFFDBE2E7);
-  Color darkBG = Color(0xFF1A1F24);
-  Color primaryBlack = Color(0xFF131619);
+  late Color white = Color(0xFFFFFFFF);
+  late Color grayBG = Color(0xFFDBE2E7);
+  late Color darkBG = Color(0xFF1A1F24);
+  late Color primaryBlack = Color(0xFF131619);
 }
 
 abstract class Typography {
@@ -131,19 +131,19 @@ class ThemeTypography extends Typography {
 
 extension TextStyleHelper on TextStyle {
   TextStyle override({
-    String fontFamily,
-    Color color,
-    double fontSize,
-    FontWeight fontWeight,
-    double letterSpacing,
-    FontStyle fontStyle,
+    String? fontFamily,
+    Color? color,
+    double? fontSize,
+    FontWeight? fontWeight,
+    double? letterSpacing,
+    FontStyle? fontStyle,
     bool useGoogleFonts = true,
-    TextDecoration decoration,
-    double lineHeight,
+    TextDecoration? decoration,
+    double? lineHeight,
   }) =>
       useGoogleFonts
           ? GoogleFonts.getFont(
-              fontFamily,
+              fontFamily!,
               color: color ?? this.color,
               fontSize: fontSize ?? this.fontSize,
               letterSpacing: letterSpacing ?? this.letterSpacing,

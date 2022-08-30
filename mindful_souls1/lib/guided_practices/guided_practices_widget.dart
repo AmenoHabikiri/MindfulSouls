@@ -22,11 +22,12 @@ import '../guided_practices_spendingand_investingtime/guided_practices_spendinga
 import '../guided_practices_stillness_ofthe_mind/guided_practices_stillness_ofthe_mind_widget.dart';
 import '../guided_practices_wishful_hapiness/guided_practices_wishful_hapiness_widget.dart';
 import '../main.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesWidget extends StatefulWidget {
-  const GuidedPracticesWidget({Key key}) : super(key: key);
+  const GuidedPracticesWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesWidgetState createState() => _GuidedPracticesWidgetState();
@@ -83,6 +84,12 @@ class _GuidedPracticesWidgetState extends State<GuidedPracticesWidget> {
           height: double.infinity,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).primaryColor,
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: Image.asset(
+                'assets/images/bg.png',
+              ).image,
+            ),
           ),
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
@@ -664,9 +671,11 @@ class _GuidedPracticesWidgetState extends State<GuidedPracticesWidget> {
                     onTap: () async {
                       await Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              GuidedPracticesWishfulHapinessWidget(),
+                        PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          duration: Duration(milliseconds: 300),
+                          reverseDuration: Duration(milliseconds: 300),
+                          child: GuidedPracticesWishfulHapinessWidget(),
                         ),
                       );
                     },
@@ -847,9 +856,11 @@ class _GuidedPracticesWidgetState extends State<GuidedPracticesWidget> {
                     onTap: () async {
                       await Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              GuidedPracticesCompassionateMindWidget(),
+                        PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          duration: Duration(milliseconds: 300),
+                          reverseDuration: Duration(milliseconds: 300),
+                          child: GuidedPracticesCompassionateMindWidget(),
                         ),
                       );
                     },
@@ -1125,9 +1136,11 @@ class _GuidedPracticesWidgetState extends State<GuidedPracticesWidget> {
                     onTap: () async {
                       await Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              GuidedPracticesIBreatheTheWorldWidget(),
+                        PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          duration: Duration(milliseconds: 300),
+                          reverseDuration: Duration(milliseconds: 300),
+                          child: GuidedPracticesIBreatheTheWorldWidget(),
                         ),
                       );
                     },

@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesWishfulHapinessWidget extends StatefulWidget {
-  const GuidedPracticesWishfulHapinessWidget({Key key}) : super(key: key);
+  const GuidedPracticesWishfulHapinessWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesWishfulHapinessWidgetState createState() =>
@@ -25,25 +24,6 @@ class _GuidedPracticesWishfulHapinessWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -69,6 +49,12 @@ class _GuidedPracticesWishfulHapinessWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -157,10 +143,10 @@ class _GuidedPracticesWishfulHapinessWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 110, 60, 0),
                                 child: Text(
-                                  'Welcome to the wishful happiness practice! In this short practice, we will learn to travel to the moments that makes us joyful. You may choose to do this exercise to relive past joyful memories or travel into the future. This practice is different from other Mindfulness practices  where we guide our awareness to the present moment.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to the wishful happiness practice! In this short practice, we will learn to travel to the moments that makes us joyful. You may choose to do this exercise to relive past joyful memories or travel into the future. This practice is different from other Mindfulness practices  where we guide our awareness to the present moment.\n',
+                                  textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -170,40 +156,6 @@ class _GuidedPracticesWishfulHapinessWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tTo begin, sit or lie down comfortably. Perhaps on a couch!\n•\tYou may close your eyes gently. At first if you find yourself overwhelmed with a lot of thoughts, relax and let me out with each breath.\n•\tAs you empty your mind from the worrisome thoughts, bring your awareness inwards. \n•\tAs you scan through your happy memories from the past, hold on to the one that you’d like to relive.\n•\tAs you begin to guide your awareness to the past, let your body be relaxed. You would notice a gentle sensation of joy as you begin to enter this moment.\n•\tNotice how you feel. Does this memory bring a gentle smile on your face? Are you already in the moment completely? \n•\tAs you relive this moment, recall little things about it. What brought your the most joy?\n•\tContinue breathing shallow & Let it continue naturally. Try not to focus on the breathing but the little things about the moment you are in.\n•\tYou are completely in the moment. I am going to be silent for a few minutes and let you relive the joy\n•\tNow as you travel back to the present moment, open your eyes gradually. Notice you’re still smiling. All your worries are gone.\n•\tPractice this exercise whenever you wish to relive happy moments.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -225,7 +177,7 @@ class _GuidedPracticesWishfulHapinessWidgetState
                       audio: Audio(
                         'assets/audios/WISHFUL-HAPPINESS.mp3',
                         metas: Metas(
-                          id: 'WISHFUL-HAPPINESS.mp3-0c890b0m',
+                          id: 'WISHFUL-HAPPINESS.mp3-4uph2z5f',
                           title: 'Wishful Happiness',
                         ),
                       ),

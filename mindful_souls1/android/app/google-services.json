@@ -1,48 +1,48 @@
 {
   "project_info": {
-    "project_number": "650850116573",
-    "project_id": "mindfulsouls-80e7f",
-    "storage_bucket": "mindfulsouls-80e7f.appspot.com"
+    "project_number": "398106642181",
+    "project_id": "mindfulsouls-99f50",
+    "storage_bucket": "mindfulsouls-99f50.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:650850116573:android:08f78c6ad074569815cc34",
+        "mobilesdk_app_id": "1:398106642181:android:2abf8ba9a7c388a4e6196c",
         "android_client_info": {
-          "package_name": "org.mindfulsouls.mindfulsouls1"
+          "package_name": "org.mindfulsouls.mindfulsouls"
         }
       },
       "oauth_client": [
         {
-          "client_id": "650850116573-147pedbrilkng7qe0ipv087kkefqo1vv.apps.googleusercontent.com",
+          "client_id": "398106642181-shri92k3v7fgs4ij0ohtrlcgb26ss9jo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "org.mindfulsouls.mindfulsouls1",
+            "package_name": "org.mindfulsouls.mindfulsouls",
             "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
           }
         },
         {
-          "client_id": "650850116573-oeqqt7051f9he4jgmr5gciu68arc5eli.apps.googleusercontent.com",
+          "client_id": "398106642181-f4a6tlgrmhufkts83juki2mupg16u6ic.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDRFgX9ne8nOyf7OrysFvzO4kNtZts4cE8"
+          "current_key": "AIzaSyAerwVPuAh0Zw3WfDbygg1f_6MBzn-LGcA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "650850116573-oeqqt7051f9he4jgmr5gciu68arc5eli.apps.googleusercontent.com",
+              "client_id": "398106642181-f4a6tlgrmhufkts83juki2mupg16u6ic.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "650850116573-o5bk1mterpu2cva4mavm2dkb4r0gpti2.apps.googleusercontent.com",
+              "client_id": "398106642181-sullthe7cgr5tji609i2n1u5a7f5ndr5.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "org.mindfulsouls.mindfulsouls1"
+                "bundle_id": "org.mindfulsouls.mindfulsouls"
               }
             }
           ]

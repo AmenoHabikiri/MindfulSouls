@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesSpendingandInvestingtimeWidget extends StatefulWidget {
-  const GuidedPracticesSpendingandInvestingtimeWidget({Key key})
+  const GuidedPracticesSpendingandInvestingtimeWidget({Key? key})
       : super(key: key);
 
   @override
@@ -26,28 +25,6 @@ class _GuidedPracticesSpendingandInvestingtimeWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -73,6 +50,12 @@ class _GuidedPracticesSpendingandInvestingtimeWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -161,10 +144,10 @@ class _GuidedPracticesSpendingandInvestingtimeWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 170, 60, 0),
                                 child: Text(
-                                  'Welcome to this short practice. For the next few minutes we’ll learn the idea of spending & investing time.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to this short practice. For the next few minutes we’ll learn the idea of spending & investing time.',
+                                  textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -174,40 +157,6 @@ class _GuidedPracticesSpendingandInvestingtimeWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tSit on a chair or a couch. You may sit relaxed or slouch. Look at the clock, note the time.\n•\tGently close your eyes. You may continue to breath shallow.\n•\tSitting relaxed, You will notice your mind is wandering without a purpose. Thoughts from the morning are arising, or perhaps how cold the weather is. Let the mind wander.\n•\tSimply sit comfortably and observe the thought arise and pass by like tourist on the airport.\n•\tA few minutes later, open your eyes gently. Look at the clock and note the time again. \n•\tNotice how many minutes have been spent on the aimless wandering thoughts. Have you earned anything in these minutes?\n•\tNot really! But we are a few minutes older now. This is spending time.\n•\tGently close your eyes again and take a few deep breaths in and exhale. Take a note of the time.\n•\tInitially, let your mind wander. Begin to focus on guiding your awareness to my voice. With each breath, focus on the words, tone & my emotions.\n•\tDo you feel connected to my voice?\n•\tNow guide your awareness to feeling compassionate for mother earth. Do you feel connected? Would you like to contribute a little in keeping the mother earth greener?\n•\tLet me tell you a trick, Next time you want to print something on the paper, instead of printing in black, choose grey fonts. The printer will use less ink and print faster.\n•\tImagine billion people doing that little change. How much electronic waste can we save?\n•\tNow gently open your eyes. Take a note of the time again.\n•\tHow many minutes have been passed since you closed your eyes? You learned to contribute to keep mother earth greener during those minutes.\n•\tThis is investing time. From next time, think if you would like to spend to time or invest time?\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -229,7 +178,7 @@ class _GuidedPracticesSpendingandInvestingtimeWidgetState
                       audio: Audio(
                         'assets/audios/SPENDING-INVESTING-TIME.mp3',
                         metas: Metas(
-                          id: 'SPENDING-INVESTING-TIME.mp3-5qcbbvxm',
+                          id: 'SPENDING-INVESTING-TIME.mp3-bd24h0u8',
                           title: 'Spending & Investing time',
                         ),
                       ),

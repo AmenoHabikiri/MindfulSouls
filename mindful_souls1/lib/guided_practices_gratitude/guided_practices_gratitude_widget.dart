@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesGratitudeWidget extends StatefulWidget {
-  const GuidedPracticesGratitudeWidget({Key key}) : super(key: key);
+  const GuidedPracticesGratitudeWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesGratitudeWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesGratitudeWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesGratitudeWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +143,10 @@ class _GuidedPracticesGratitudeWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 130, 60, 0),
                                 child: Text(
-                                  'Welcome to the loving kindness meditation. This practice is very helpful in healing the sufferings of people you love & care about. It’s important to be emotionally calm before we do this practice. It is recommended that you practice self love & compassion before this practice.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to the loving kindness meditation. This practice is very helpful in healing the sufferings of people you love & care about. It’s important to be emotionally calm before we do this practice. It is recommended that you practice self love & compassion before this practice.',
+                                  textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +156,6 @@ class _GuidedPracticesGratitudeWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tYou may sit or even lie down in a comfortable position before you begin. \n•\tGently close your eyes & Let your breathing in be normal. As you breath out, let all the undesired thought leave your mind and body.\n•\tObserve if your mind is free from all the thoughts. Pleasant or unpleasant!\n•\tHold your awareness and let it rest on something that you are most grateful for. Take moment to discover it.\n•\tOnce you know it, let all the related emotions arise. Happy or joyful or blessed. Notice, does it fill you heart with love and gratitude? If yes, let this gratitude reach to the person or thing.\n•\tLet the cycle of inhaling love and exhaling gratitude for everything you are grateful for. Let your gratitude travel to everyone and everything that makes your life wonderful.\n•\tContinue this practice for as Long as your like and for as little things as a little gesture to as big as being alive.\n•\tAs we come towards the end of this practice, take a moment to express gratitude for yourself too. Because only a grateful heart can love. Remind yourself that you deserve a joyful life.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesGratitudeWidgetState
                       audio: Audio(
                         'assets/audios/GRATITUDE.mp3',
                         metas: Metas(
-                          id: 'GRATITUDE.mp3-pfxi7lua',
+                          id: 'GRATITUDE.mp3-ql78riik',
                           title: 'Gratitude',
                         ),
                       ),

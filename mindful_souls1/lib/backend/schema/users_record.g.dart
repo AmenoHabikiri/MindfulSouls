@@ -15,10 +15,10 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
   final String wireName = 'UsersRecord';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, UsersRecord object,
+  Iterable<Object?> serialize(Serializers serializers, UsersRecord object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    Object value;
+    final result = <Object?>[];
+    Object? value;
     value = object.password;
     if (value != null) {
       result
@@ -88,73 +88,73 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.reference;
+    value = object.ffRef;
     if (value != null) {
       result
         ..add('Document__Reference__Field')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(
-                DocumentReference, const [const FullType(Object)])));
+                DocumentReference, const [const FullType.nullable(Object)])));
     }
     return result;
   }
 
   @override
-  UsersRecord deserialize(Serializers serializers, Iterable<Object> serialized,
+  UsersRecord deserialize(Serializers serializers, Iterable<Object?> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new UsersRecordBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
-      final key = iterator.current as String;
+      final key = iterator.current! as String;
       iterator.moveNext();
-      final Object value = iterator.current;
+      final Object? value = iterator.current;
       switch (key) {
         case 'Password':
           result.password = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'FullName':
           result.fullName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'uid':
           result.uid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'email':
           result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'display_name':
           result.displayName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'created_time':
           result.createdTime = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+              specifiedType: const FullType(DateTime)) as DateTime?;
           break;
         case 'phone_number':
           result.phoneNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'photo_url':
           result.photoUrl = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'age':
           result.age = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(int)) as int?;
           break;
         case 'gender':
           result.gender = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+              specifiedType: const FullType(String)) as String?;
           break;
         case 'Document__Reference__Field':
-          result.reference = serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      DocumentReference, const [const FullType(Object)]))
-              as DocumentReference<Object>;
+          result.ffRef = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
           break;
       }
     }
@@ -165,30 +165,30 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
 
 class _$UsersRecord extends UsersRecord {
   @override
-  final String password;
+  final String? password;
   @override
-  final String fullName;
+  final String? fullName;
   @override
-  final String uid;
+  final String? uid;
   @override
-  final String email;
+  final String? email;
   @override
-  final String displayName;
+  final String? displayName;
   @override
-  final DateTime createdTime;
+  final DateTime? createdTime;
   @override
-  final String phoneNumber;
+  final String? phoneNumber;
   @override
-  final String photoUrl;
+  final String? photoUrl;
   @override
-  final int age;
+  final int? age;
   @override
-  final String gender;
+  final String? gender;
   @override
-  final DocumentReference<Object> reference;
+  final DocumentReference<Object?>? ffRef;
 
-  factory _$UsersRecord([void Function(UsersRecordBuilder) updates]) =>
-      (new UsersRecordBuilder()..update(updates)).build();
+  factory _$UsersRecord([void Function(UsersRecordBuilder)? updates]) =>
+      (new UsersRecordBuilder()..update(updates))._build();
 
   _$UsersRecord._(
       {this.password,
@@ -201,7 +201,7 @@ class _$UsersRecord extends UsersRecord {
       this.photoUrl,
       this.age,
       this.gender,
-      this.reference})
+      this.ffRef})
       : super._();
 
   @override
@@ -225,7 +225,7 @@ class _$UsersRecord extends UsersRecord {
         photoUrl == other.photoUrl &&
         age == other.age &&
         gender == other.gender &&
-        reference == other.reference;
+        ffRef == other.ffRef;
   }
 
   @override
@@ -249,12 +249,12 @@ class _$UsersRecord extends UsersRecord {
                     photoUrl.hashCode),
                 age.hashCode),
             gender.hashCode),
-        reference.hashCode));
+        ffRef.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('UsersRecord')
+    return (newBuiltValueToStringHelper(r'UsersRecord')
           ..add('password', password)
           ..add('fullName', fullName)
           ..add('uid', uid)
@@ -265,58 +265,57 @@ class _$UsersRecord extends UsersRecord {
           ..add('photoUrl', photoUrl)
           ..add('age', age)
           ..add('gender', gender)
-          ..add('reference', reference))
+          ..add('ffRef', ffRef))
         .toString();
   }
 }
 
 class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
-  _$UsersRecord _$v;
+  _$UsersRecord? _$v;
 
-  String _password;
-  String get password => _$this._password;
-  set password(String password) => _$this._password = password;
+  String? _password;
+  String? get password => _$this._password;
+  set password(String? password) => _$this._password = password;
 
-  String _fullName;
-  String get fullName => _$this._fullName;
-  set fullName(String fullName) => _$this._fullName = fullName;
+  String? _fullName;
+  String? get fullName => _$this._fullName;
+  set fullName(String? fullName) => _$this._fullName = fullName;
 
-  String _uid;
-  String get uid => _$this._uid;
-  set uid(String uid) => _$this._uid = uid;
+  String? _uid;
+  String? get uid => _$this._uid;
+  set uid(String? uid) => _$this._uid = uid;
 
-  String _email;
-  String get email => _$this._email;
-  set email(String email) => _$this._email = email;
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
-  String _displayName;
-  String get displayName => _$this._displayName;
-  set displayName(String displayName) => _$this._displayName = displayName;
+  String? _displayName;
+  String? get displayName => _$this._displayName;
+  set displayName(String? displayName) => _$this._displayName = displayName;
 
-  DateTime _createdTime;
-  DateTime get createdTime => _$this._createdTime;
-  set createdTime(DateTime createdTime) => _$this._createdTime = createdTime;
+  DateTime? _createdTime;
+  DateTime? get createdTime => _$this._createdTime;
+  set createdTime(DateTime? createdTime) => _$this._createdTime = createdTime;
 
-  String _phoneNumber;
-  String get phoneNumber => _$this._phoneNumber;
-  set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
+  String? _phoneNumber;
+  String? get phoneNumber => _$this._phoneNumber;
+  set phoneNumber(String? phoneNumber) => _$this._phoneNumber = phoneNumber;
 
-  String _photoUrl;
-  String get photoUrl => _$this._photoUrl;
-  set photoUrl(String photoUrl) => _$this._photoUrl = photoUrl;
+  String? _photoUrl;
+  String? get photoUrl => _$this._photoUrl;
+  set photoUrl(String? photoUrl) => _$this._photoUrl = photoUrl;
 
-  int _age;
-  int get age => _$this._age;
-  set age(int age) => _$this._age = age;
+  int? _age;
+  int? get age => _$this._age;
+  set age(int? age) => _$this._age = age;
 
-  String _gender;
-  String get gender => _$this._gender;
-  set gender(String gender) => _$this._gender = gender;
+  String? _gender;
+  String? get gender => _$this._gender;
+  set gender(String? gender) => _$this._gender = gender;
 
-  DocumentReference<Object> _reference;
-  DocumentReference<Object> get reference => _$this._reference;
-  set reference(DocumentReference<Object> reference) =>
-      _$this._reference = reference;
+  DocumentReference<Object?>? _ffRef;
+  DocumentReference<Object?>? get ffRef => _$this._ffRef;
+  set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
 
   UsersRecordBuilder() {
     UsersRecord._initializeBuilder(this);
@@ -335,7 +334,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
       _photoUrl = $v.photoUrl;
       _age = $v.age;
       _gender = $v.gender;
-      _reference = $v.reference;
+      _ffRef = $v.ffRef;
       _$v = null;
     }
     return this;
@@ -348,12 +347,14 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   }
 
   @override
-  void update(void Function(UsersRecordBuilder) updates) {
+  void update(void Function(UsersRecordBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$UsersRecord build() {
+  UsersRecord build() => _build();
+
+  _$UsersRecord _build() {
     final _$result = _$v ??
         new _$UsersRecord._(
             password: password,
@@ -366,10 +367,10 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
             photoUrl: photoUrl,
             age: age,
             gender: gender,
-            reference: reference);
+            ffRef: ffRef);
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas

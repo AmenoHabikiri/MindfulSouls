@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesCompassionateMindWidget extends StatefulWidget {
-  const GuidedPracticesCompassionateMindWidget({Key key}) : super(key: key);
+  const GuidedPracticesCompassionateMindWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesCompassionateMindWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesCompassionateMindWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesCompassionateMindWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,53 +143,19 @@ class _GuidedPracticesCompassionateMindWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 163, 60, 0),
                                 child: Text(
-                                  'Welcome to the Compassionate Mind practice. In this short exercise, we will learn to nourish the seeds of compassion in our mind which leads to the path to eternal joy.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to the Compassionate Mind practice. In this short exercise, we will learn to nourish the seeds of compassion in our mind which leads to the path to eternal joy.\n',
+                                  textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
                                         fontFamily: 'Raleway',
                                         color: FlutterFlowTheme.of(context)
                                             .tertiaryColor,
-                                        fontSize: 15,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tSit comfortably in a quiet room. You may choose to sit on a chair with your spine straight.\n•\tTake a deep breath and let your body loosen up all the tension with each exhale. Notice your body getting relaxed with each exhale. Let go of anything that your mind is clutching on.\n•\tAs your mind and body become rooted to the present moment, notice the magical feeling of being alive. Your body & your mind are in a state of bliss as you let go of everything. Every thought, every sensation.\n•\tNow gently guide your awareness to the world around you, the nature. It doesn’t seek anything from you but gives everything. Food, water, air, resources, love, beauty. \n•\tLet your heart fill with this selfless love & compassion the nature gives you. \n•\tCan you recall an incident when you made a mistake that hurt you? Did you forgive yourself? Did you let go of the guilt and care about your own emotions?\n•\tTry to recall how being compassionate for yourself made you feel? Take a few moments to recall this feeling. I will be quiet while you observe your feelings. \n•\tNow try to recall an incident when someone did something to help you? Maybe at work, in your social life or perhaps one of your friends did something to help you selflessly. Notice how you felt. Let’s observe a few moments of silence while you recall this experience.\n•\tNow try to recall an experience when you did something for someone out of pure love and compassion. Perhaps fed a hungry person on the street or a stray animal. Recall how you felt. Did you feel proud on yourself? Did your heart fill with joy when you did something for others? Did you feel a greater sense of self worth? Take a few moments to observe the feelings.\n•\tNotice how compassion and joyful are so connected. We don’t feel it when we buy something for ourselves. We may feel happy but true joy is only felt by being compassionate.\n•\tNow guiding your awareness to the present moment, breath in all the infinite love and  compassion the universe has. Let your heart fill with joy, love & compassion.\n•\tYou may choose to take the pledge after me. “I choose to be compassionate for myself, all other living beings and the universe around me. I choose to let my body & mind be a source of love and compassion.”\n•\tWhen ready, you may gently close your eyes.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesCompassionateMindWidgetState
                       audio: Audio(
                         'assets/audios/COMPASSIONATE-MIND.mp3',
                         metas: Metas(
-                          id: 'COMPASSIONATE-MIND.mp3-v1bck41m',
+                          id: 'COMPASSIONATE-MIND.mp3-k0x6xufo',
                           title: 'Compassionate Mind',
                         ),
                       ),

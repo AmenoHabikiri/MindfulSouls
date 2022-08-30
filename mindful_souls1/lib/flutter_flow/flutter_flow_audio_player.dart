@@ -24,13 +24,13 @@ export 'package:assets_audio_player/assets_audio_player.dart';
 
 class FlutterFlowAudioPlayer extends StatefulWidget {
   const FlutterFlowAudioPlayer({
-    @required this.audio,
-    this.titleTextStyle,
-    this.playbackDurationTextStyle,
-    this.fillColor,
-    this.playbackButtonColor,
-    this.activeTrackColor,
-    this.elevation,
+    required this.audio,
+    required this.titleTextStyle,
+    required this.playbackDurationTextStyle,
+    required this.fillColor,
+    required this.playbackButtonColor,
+    required this.activeTrackColor,
+    required this.elevation,
   });
 
   final Audio audio;
@@ -46,7 +46,7 @@ class FlutterFlowAudioPlayer extends StatefulWidget {
 }
 
 class _FlutterFlowAudioPlayerState extends State<FlutterFlowAudioPlayer> {
-  AssetsAudioPlayer _assetsAudioPlayer;
+  AssetsAudioPlayer? _assetsAudioPlayer;
 
   @override
   void initState() {
@@ -57,10 +57,10 @@ class _FlutterFlowAudioPlayerState extends State<FlutterFlowAudioPlayer> {
   Future openPlayer() async {
     _assetsAudioPlayer ??=
         AssetsAudioPlayer.withId(generateRandomAlphaNumericString());
-    if (_assetsAudioPlayer.playlist != null) {
-      _assetsAudioPlayer.playlist.replaceAt(0, (oldAudio) => widget.audio);
+    if (_assetsAudioPlayer?.playlist != null) {
+      _assetsAudioPlayer!.playlist!.replaceAt(0, (oldAudio) => widget.audio);
     } else {
-      await _assetsAudioPlayer.open(
+      await _assetsAudioPlayer!.open(
         Playlist(audios: [widget.audio]),
         autoStart: false,
         playInBackground: PlayInBackground.disabledRestoreOnForeground,
@@ -85,9 +85,9 @@ class _FlutterFlowAudioPlayerState extends State<FlutterFlowAudioPlayer> {
 
   @override
   Widget build(BuildContext context) =>
-      _assetsAudioPlayer.builderRealtimePlayingInfos(
+      _assetsAudioPlayer!.builderRealtimePlayingInfos(
           builder: (context, infos) => PlayerBuilder.isPlaying(
-              player: _assetsAudioPlayer,
+              player: _assetsAudioPlayer!,
               builder: (context, isPlaying) {
                 final childWidget = Container(
                   width: double.infinity,
@@ -125,7 +125,7 @@ class _FlutterFlowAudioPlayerState extends State<FlutterFlowAudioPlayer> {
                             child: Material(
                               color: Colors.transparent,
                               child: IconButton(
-                                onPressed: _assetsAudioPlayer.playOrPause,
+                                onPressed: _assetsAudioPlayer!.playOrPause,
                                 icon: Icon(
                                   (isPlaying)
                                       ? Icons.pause_circle_filled_rounded
@@ -143,7 +143,7 @@ class _FlutterFlowAudioPlayerState extends State<FlutterFlowAudioPlayer> {
                         currentPosition: currentPosition(infos),
                         duration: duration(infos),
                         seekTo: (to) {
-                          _assetsAudioPlayer.seek(to);
+                          _assetsAudioPlayer!.seek(to);
                         },
                         activeTrackColor: widget.activeTrackColor,
                       ),
@@ -162,10 +162,10 @@ class _FlutterFlowAudioPlayerState extends State<FlutterFlowAudioPlayer> {
 
 class PositionSeekWidget extends StatefulWidget {
   const PositionSeekWidget({
-    @required this.currentPosition,
-    @required this.duration,
-    @required this.seekTo,
-    @required this.activeTrackColor,
+    required this.currentPosition,
+    required this.duration,
+    required this.seekTo,
+    required this.activeTrackColor,
   });
 
   final Duration currentPosition;
@@ -178,7 +178,7 @@ class PositionSeekWidget extends StatefulWidget {
 }
 
 class _PositionSeekWidgetState extends State<PositionSeekWidget> {
-  Duration _visibleValue;
+  late Duration _visibleValue;
   bool listenOnlyUserInteraction = false;
   double get percent => widget.duration.inMilliseconds == 0
       ? 0
@@ -245,11 +245,11 @@ class FlutterFlowRoundedRectSliderTrackShape extends SliderTrackShape
   void paint(
     PaintingContext context,
     Offset offset, {
-    @required RenderBox parentBox,
-    @required SliderThemeData sliderTheme,
-    @required Animation<double> enableAnimation,
-    @required TextDirection textDirection,
-    @required Offset thumbCenter,
+    required RenderBox parentBox,
+    required SliderThemeData sliderTheme,
+    required Animation<double> enableAnimation,
+    required TextDirection textDirection,
+    required Offset thumbCenter,
     bool isDiscrete = false,
     bool isEnabled = false,
     double additionalActiveTrackHeight = 0,
@@ -269,7 +269,7 @@ class FlutterFlowRoundedRectSliderTrackShape extends SliderTrackShape
     // If the slider [SliderThemeData.trackHeight] is less than or equal to 0,
     // then it makes no difference whether the track is painted or not,
     // therefore the painting  can be a no-op.
-    if (sliderTheme.trackHeight == null || sliderTheme.trackHeight <= 0) {
+    if (sliderTheme.trackHeight == null || sliderTheme.trackHeight! <= 0) {
       return;
     }
 
@@ -282,9 +282,9 @@ class FlutterFlowRoundedRectSliderTrackShape extends SliderTrackShape
         begin: sliderTheme.disabledInactiveTrackColor,
         end: sliderTheme.inactiveTrackColor);
     final Paint activePaint = Paint()
-      ..color = activeTrackColorTween.evaluate(enableAnimation);
+      ..color = activeTrackColorTween.evaluate(enableAnimation)!;
     final Paint inactivePaint = Paint()
-      ..color = inactiveTrackColorTween.evaluate(enableAnimation);
+      ..color = inactiveTrackColorTween.evaluate(enableAnimation)!;
     final Paint leftTrackPaint = activePaint;
     final Paint rightTrackPaint = inactivePaint;
 

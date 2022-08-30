@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesPurposeWidget extends StatefulWidget {
-  const GuidedPracticesPurposeWidget({Key key}) : super(key: key);
+  const GuidedPracticesPurposeWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesPurposeWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesPurposeWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesPurposeWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +143,10 @@ class _GuidedPracticesPurposeWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 130, 60, 0),
                                 child: Text(
-                                  'Welcome to this short practice. This exercise helps us begin our journey to discover our purpose. Remember some people take a lifetime to discover their purpose. This practice can only help if we’re aware of our mind, emotions & innate character.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Welcome to this short practice. This exercise helps us begin our journey to discover our purpose. Remember some people take a lifetime to discover their purpose. This practice can only help if we’re aware of our mind, emotions & innate character.\n',
+                                  textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +156,6 @@ class _GuidedPracticesPurposeWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tTo begin, sit in the lotus position in a quiet room. Keep your spine straight.\n•\tBegin with a deep inhale & exhale through your mouth.\n•\tObserve if you are overwhelmed with worrying thoughts or uncomfortable emotions. With each breath out, let all these thoughts leave your mind and body.\n•\tYou’ll notice as the existing thoughts begin to exit, new thoughts will arise. It’s alright. \n•\tTry to guide your awareness to rest on a pleasant subject, similar emotions and thoughts will begin to arise.\n•\tDo you feel pleasant? Is your awareness leading your emotions & thoughts? Exhale one more time to let your body relax.\n•\tNow, guide your awareness inwards. You will begin to see the bright light illuminating your mind, bright as sun. \n•\tLet your awareness scan your mind, your strengths, source of joy, your pleasant emotions & their source. Where does the joy come from? Quietly, look for the source. Does it come from flying, serving people, the idea of serving your nation, healing people, caring for the animals or something else. Let’s take a few moments to let our awareness find the source. (**Quiet for about 8-10 seconds**)\n•\tDid you notice the joy mostly comes from the source with other lives are involved? Your purpose is broader & more generous than your passion.\n•\tHold the source of joy in your mind. \n•\tGently, open your eyes, write down this source.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesPurposeWidgetState
                       audio: Audio(
                         'assets/audios/PURPOSE.mp3',
                         metas: Metas(
-                          id: 'PURPOSE.mp3-8mdxpaaq',
+                          id: 'PURPOSE.mp3-tj77nepf',
                           title: 'Purpose',
                         ),
                       ),

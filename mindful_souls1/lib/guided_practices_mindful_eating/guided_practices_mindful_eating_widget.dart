@@ -1,13 +1,12 @@
 import '../flutter_flow/flutter_flow_audio_player.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../guided_practices/guided_practices_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class GuidedPracticesMindfulEatingWidget extends StatefulWidget {
-  const GuidedPracticesMindfulEatingWidget({Key key}) : super(key: key);
+  const GuidedPracticesMindfulEatingWidget({Key? key}) : super(key: key);
 
   @override
   _GuidedPracticesMindfulEatingWidgetState createState() =>
@@ -25,28 +24,6 @@ class _GuidedPracticesMindfulEatingWidgetState
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            await Navigator.push(
-              context,
-              PageTransition(
-                type: PageTransitionType.leftToRight,
-                duration: Duration(milliseconds: 300),
-                reverseDuration: Duration(milliseconds: 300),
-                child: GuidedPracticesWidget(),
-              ),
-            );
-          },
-        ),
         title: Text(
           'Guided Practices',
           style: FlutterFlowTheme.of(context).title2.override(
@@ -72,6 +49,12 @@ class _GuidedPracticesMindfulEatingWidgetState
                   height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: Image.asset(
+                        'assets/images/ml88i_4.png',
+                      ).image,
+                    ),
                   ),
                   child: Container(
                     width: double.infinity,
@@ -160,10 +143,10 @@ class _GuidedPracticesMindfulEatingWidgetState
                               ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 0, 10, 0),
+                                    60, 175, 60, 0),
                                 child: Text(
-                                  'Hello! This is a short practice where you will practice mindful eating.\n\nInstructions:',
-                                  textAlign: TextAlign.start,
+                                  'Hello! This is a short practice where you will practice mindful eating.',
+                                  textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -173,40 +156,6 @@ class _GuidedPracticesMindfulEatingWidgetState
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                       ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 5, 10, 5),
-                                  child: Card(
-                                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context).white,
-                                    elevation: 10,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 10, 10, 5),
-                                      child: ListView(
-                                        padding: EdgeInsets.zero,
-                                        shrinkWrap: true,
-                                        scrollDirection: Axis.vertical,
-                                        children: [
-                                          Text(
-                                            '•\tWelcome to mindful eating. Keep a small portion of food with you. It can be anything as small as an almond to something as big as a sandwich or even an orange.\n•\tBefore we begin, notice any feeling, emotion, or thoughts that you may be feeling right at this moment.\n•\tWhat are the sensations that you can feel? Are you feeling hungry, thirsty, or perhaps full?\n•\tBring your attention to the food that you have.\n•\tImagine that you are looking at it for the first time.\n•\tWhat do you see?\n•\tNotice the color, the texture, the smell. Is the food warm or cold? What does it look like? Is there anything else that you can notice? How do you feel looking at this food?\n•\tImagine how it feels to touch the food or the orange. Let the pleasure from this touch & your eyes travel to your mind. Notice how you feel!\n•\tCan you try to imagine what it must have taken to get this piece of food to your plate?\n•\tWho are all the people that were involved? \n•\tTry to express your gratitude for each and every one of them. \n•\tAs you look at the food, if you find your thoughts wandering, gently bring your focus back.\n•\tAre there any memories that this food brings?\n•\tBefore you take a bite, try to imagine what it would taste like?\n•\tSlowly, place the bite in your mouth.\n•\tWhat does it feel like? Notice the texture, the shape, the temperature, the weight. What are the flavors? \n•\tAs you slowly chew the food, notice what else you are consuming with the food. Gratitude, love from the nature and all the people involved in bringing this to your hands.\n•\tContinue to chew the food item and notice the parts of your mouth that are involved. \n•\tAre there any chewing sounds? \n•\tBring your awareness to your feelings. How does it feel to eat this?\n•\tIs there a change in your mood?\n•\tYou can start to swallow the food if you haven’t already done so.\n•\tTry to notice the path it follows, from your mouth, all the way to your stomach.\n•\tNow, notice your body. Is there any change in your breathing? \n•\tWhen you feel ready, take another bite of the food and eat it as mindfully as you can.\n•\tNotice how similar or different this bite felt as compared to the first.\n•\tThank yourself for this exercise and continue to enjoy your food.\n',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyText1
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ],
@@ -228,7 +177,7 @@ class _GuidedPracticesMindfulEatingWidgetState
                       audio: Audio(
                         'assets/audios/MINDFUL-EATING.mp3',
                         metas: Metas(
-                          id: 'MINDFUL-EATING.mp3-xi4hasih',
+                          id: 'MINDFUL-EATING.mp3-plo554gk',
                           title: 'Mindful Eating',
                         ),
                       ),

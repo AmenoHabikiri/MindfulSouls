@@ -2,6 +2,7 @@ import '../flutter_flow/flutter_flow_audio_player.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../guided_practices/guided_practices_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -34,8 +35,16 @@ class _GuidedPracticesAwarenessWidgetState
             color: Colors.white,
             size: 30,
           ),
-          onPressed: () {
-            print('IconButton pressed ...');
+          onPressed: () async {
+            await Navigator.push(
+              context,
+              PageTransition(
+                type: PageTransitionType.leftToRight,
+                duration: Duration(milliseconds: 300),
+                reverseDuration: Duration(milliseconds: 300),
+                child: GuidedPracticesWidget(),
+              ),
+            );
           },
         ),
         title: Text(
@@ -60,7 +69,7 @@ class _GuidedPracticesAwarenessWidgetState
               children: [
                 Container(
                   width: double.infinity,
-                  height: 600,
+                  height: 625,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryColor,
                   ),
@@ -103,7 +112,7 @@ class _GuidedPracticesAwarenessWidgetState
                                             borderRadius:
                                                 BorderRadius.circular(12),
                                             child: Image.asset(
-                                              'assets/images/MJY.png',
+                                              'assets/images/Awareness.png',
                                               width: 80,
                                               height: 80,
                                               fit: BoxFit.cover,
@@ -211,7 +220,7 @@ class _GuidedPracticesAwarenessWidgetState
                   alignment: AlignmentDirectional(0, 1),
                   child: Container(
                     width: double.infinity,
-                    height: 115,
+                    height: 90,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).tertiaryColor,
                     ),
@@ -219,7 +228,7 @@ class _GuidedPracticesAwarenessWidgetState
                       audio: Audio(
                         'assets/audios/AWARENESS.mp3',
                         metas: Metas(
-                          id: 'AWARENESS.mp3-td6n6vw2',
+                          id: 'AWARENESS.mp3-bc0gc0yv',
                           title: 'Awareness',
                         ),
                       ),

@@ -18,11 +18,12 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../guided_practices_compassionforalllivingbeings/guided_practices_compassionforalllivingbeings_widget.dart';
 import '../main.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BlogsWidget extends StatefulWidget {
-  const BlogsWidget({Key key}) : super(key: key);
+  const BlogsWidget({Key? key}) : super(key: key);
 
   @override
   _BlogsWidgetState createState() => _BlogsWidgetState();
@@ -79,6 +80,12 @@ class _BlogsWidgetState extends State<BlogsWidget> {
           height: double.infinity,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).primaryColor,
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: Image.asset(
+                'assets/images/bg.png',
+              ).image,
+            ),
           ),
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
